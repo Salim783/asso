@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';  // Importation du Link
 
-function Page() {
+function Contact() {
     return (
         <div>
             <div className="Presentation">
@@ -22,4 +22,4 @@ function Page() {
     );
 }
 
-export default Page;
+export default Contact;

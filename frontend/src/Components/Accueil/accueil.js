@@ -1,5 +1,4 @@
 import './accueil.css';
-import { Link } from 'react-router-dom';  // Importation du composant Link
 
 function Accueil() {
     return (
@@ -27,11 +26,6 @@ function Accueil() {
             <div className="Actions">
                 <h4>Nos actions</h4>
                 <p></p>
-            </div>
-
-            {/* Lien vers la page */}
-            <div>
-                <Link to="/Page">Accéder à la page</Link> {/* Remplacez "/page" par le chemin correspondant */}
             </div>
         </div>
     );
