@@ -1,8 +1,14 @@
-import React from "react";
-import { FiChevronDown } from "react-icons/fi";
-import "./header.css"; // Ajoute ce fichier CSS dans ton projet
+import React, { useState } from "react";
+import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import "./header.css";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
       <div className="header-container">
@@ -11,8 +17,29 @@ const Header = () => {
           MonLogo
         </a>
 
-        {/* Navigation */}
-        <nav className="nav">
+        {/* Menu Burger */}
+        <button className="burger-menu" onClick={toggleMenu}>
+          {isMenuOpen ? <FiX className="burger-icon" /> : <FiMenu className="burger-icon" />}
+        </button>
+
+        {/* Navigation (Burger Menu) */}
+        <nav className={`nav ${isMenuOpen ? "nav-open" : ""}`}>
+          {/* Bouton Fermer */}
+          <button className="close-btn" onClick={toggleMenu}>
+            <FiX className="close-icon" /> Fermer
+          </button>
+
+          {/* Liens */}
+          <a href="#about" className="nav-link" onClick={toggleMenu}>
+            À propos
+          </a>
+          <a href="#services" className="nav-link" onClick={toggleMenu}>
+            Services
+          </a>
+          <a href="#contact" className="nav-link" onClick={toggleMenu}>
+            Contact
+          </a>
+
           {/* Dropdown */}
           <div className="dropdown">
             <button className="dropdown-btn">
@@ -27,14 +54,6 @@ const Header = () => {
               </a>
             </div>
           </div>
-
-          {/* Boutons */}
-          <a href="#about" className="btn btn-secondary">
-            En savoir plus sur nous
-          </a>
-          <a href="#contact" className="btn btn-primary">
-            Contact
-          </a>
         </nav>
       </div>
     </header>
