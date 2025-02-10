@@ -1,0 +1,24 @@
+.Presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.Container1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.Objectif{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Histoire{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
