@@ -1,142 +1,139 @@
 /* Général */
 .header {
-    background-color: #1e293b;
-    color: #ffffff;
-    padding: 20px 10px;
-    position: relative;
-    z-index: 10;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  /* Boutons */
-  .btn {
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 1rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary {
-    background-color: #4cafb0;
-    color: #ffffff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #3b8f94;
-  }
-  
-  .btn-secondary {
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #ffffff;
-    color: #1e293b;
-  }
-  
-  /* Burger Menu */
+  background-color: #f9f9f9; /* Fond clair comme le footer */
+  color: #333; /* Couleur du texte */
+  padding: 10px 20px; /* Réduire la hauteur du header */
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  max-width: 120px; /* Logo plus petit pour plus de compacité */
+  height: auto;
+}
+.close-btn{
+  display: none;
+}
+/* Menu Burger */
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Boutons (liens de navigation) */
+.nav {
+  display: flex;
+  gap: 40px; /* Augmenter l'espace entre les éléments */
+  align-items: center;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem; /* Agrandir la taille des boutons */
+  font-weight: 500;
+  padding: 12px 24px; /* Augmenter le padding pour agrandir les boutons */
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #4cafb0; /* Fond vert clair au survol */
+  color: white;
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+/* Dropdown */
+.dropdown {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem; /* Agrandir la taille des boutons */
+  font-weight: 500;
+  padding: 12px 24px; /* Augmenter le padding pour agrandir les boutons */
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.dropdown:hover{
+  background-color: #4cafb0; /* Fond vert clair au survol */
+  color: white;
+  transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem; /* Agrandir la taille du bouton du dropdown */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #4cafb0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Menu Burger (Animation depuis la droite) */
+@media (max-width: 768px) {
   .burger-menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
-  /* Navigation */
-  .nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  /* Dropdown */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-btn {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #1e293b;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown-menu a {
-    display: block;
-    padding: 5px 10px;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .dropdown-menu a:hover {
-    background-color: #4cafb0;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .close-btn {
-    display: none; /* Masquer par défaut */
-    align-items: center;
-    gap: 10px;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: left;
-  }
-  
-  /* Menu Burger (Animation depuis la droite) */
-  @media (max-width: 768px) {
-    .burger-menu {
       display: block;
-    }
-  
-    .nav {
+  }
+
+  .nav {
       position: fixed;
       top: 0;
       right: -100%;
       height: 100%;
       width: 250px;
-      background-color: #1e293b;
+      background-color: #f9f9f9;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -145,47 +142,46 @@
       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
       transition: right 0.3s ease-in-out;
       z-index: 20;
-    }
-  
-    .nav.nav-open {
+  }
+
+  .nav.nav-open {
       right: 0;
-    }
-  
-    .nav-link {
-      color: #ffffff;
+  }
+
+  .nav-link {
+      color: #333;
       text-decoration: none;
       font-size: 1.2rem;
       width: 100%;
-    }
-  
-    .nav-link:hover {
+      padding: 15px 0; /* Plus d'espace vertical pour une meilleure lisibilité */
+      text-align: left;
+  }
+
+  .nav-link:hover {
       background-color: #4cafb0;
       color: #ffffff;
-      padding-left: 10px;
-    }
-  
-    /* Bouton Fermer */
-    .close-btn {
+      padding-left: 20px;
+  }
+
+  .close-btn {
       display: none; /* Masquer par défaut */
       align-items: center;
       gap: 10px;
       background: none;
       border: none;
-      color: #ffffff;
+      color: #333;
       font-size: 1.2rem;
       cursor: pointer;
       margin-bottom: 20px;
       width: 100%;
       text-align: left;
-    }
-  
-    /* Afficher le bouton uniquement lorsque le menu est ouvert */
-    .nav.nav-open .close-btn {
-      display: flex; /* Visible quand le menu est ouvert */
-    }
-  
-    .close-btn:hover {
-      color: #4cafb0;
-    }
   }
-  
+
+  .nav.nav-open .close-btn {
+      display: flex; /* Afficher lorsque le menu est ouvert */
+  }
+
+  .close-btn:hover {
+      color: #4cafb0;
+  }
+}

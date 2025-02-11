@@ -1,21 +1,51 @@
 import React from "react";
 import "./footer.css";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Import des icônes React Icons
+import logo from "../../assets/logoMIA.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo */}
-        <div className="footer-logo">
-          <a href="/" className="logo-link">Mon Logo</a>
-        </div>
+        <div className="footer-top">
+          {/* Logo et Sections À Propos, Contact, Liens rapides alignés horizontalement */}
+          <div className="footer-logo">
+            <a href="/" className="logo-link">
+              <img src={logo} alt="Logo" className="logo-image" />
+            </a>
+          </div>
 
-        {/* Navigation */}
-        <div className="footer-links">
-          <a href="#about" className="footer-link">À propos</a>
-          <a href="#services" className="footer-link">Services</a>
-          <a href="#contact" className="footer-link">Contact</a>
+          <div className="footer-sections">
+            {/* Section À Propos */}
+            <div className="footer-section">
+              <h3 className="footer-title">À propos</h3>
+              <ul className="footer-list">
+                <li><a href="#who-we-are" className="footer-link">Qui sommes-nous ?</a></li>
+                <li><a href="#mission" className="footer-link">Notre mission</a></li>
+                <li><a href="#values" className="footer-link">Nos valeurs</a></li>
+              </ul>
+            </div>
+
+            {/* Section Contact */}
+            <div className="footer-section">
+              <h3 className="footer-title">Contact</h3>
+              <ul className="footer-list">
+                <li><a href="#email" className="footer-link">Email</a></li>
+                <li><a href="#phone" className="footer-link">Téléphone</a></li>
+                <li><a href="#address" className="footer-link">Adresse</a></li>
+              </ul>
+            </div>
+
+            {/* Section Liens rapides */}
+            <div className="footer-section">
+              <h3 className="footer-title">Liens rapides</h3>
+              <ul className="footer-list">
+                <li><a href="#services" className="footer-link">Services</a></li>
+                <li><a href="#faq" className="footer-link">FAQ</a></li>
+                <li><a href="#support" className="footer-link">Support</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/* Social Icons */}
@@ -51,7 +81,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; 2025 MonSite. Tous droits réservés.</p>
         <p>
-          <a href="/mentions-legales" className="footer-bottom-link">Mentions légales</a> |{" "}
+          <a href="/mentions-legales" className="footer-bottom-link">Mentions légales</a> | {" "}
           <a href="/cgu" className="footer-bottom-link">CGU</a>
         </p>
       </div>

@@ -1,24 +1,218 @@
-.Presentation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.accueil {
+    background-color: #f7f9fc;
+    color: #333;
+    padding: 30px;
+}
+
+.presentation {
+    text-align: center;
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, #f7f9fc, #e3e7f1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.presentation h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Lora', serif;
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.presentation .btn-action {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.presentation .btn-action:hover {
+    background-color: #555;
+}
+
+.histoire {
+    margin-bottom: 50px;
+    background-color: #f4f6f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.histoire h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.histoire p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.histoire blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #777;
+    border-left: 4px solid #333;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.histoire hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 30px 0;
+}
+
+.objectif {
+    margin-bottom: 50px;
+}
+
+.objectif h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 25px;
     text-align: center;
 }
-.Container1{
+
+.objectif-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.objectif-item {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.objectif-card {
     width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, box-shadow 0.3s ease-in-out;
 }
-.Objectif{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.objectif-item.flip .objectif-card {
+    transform: rotateY(180deg);
 }
-.Histoire{
-    width: 50%;
+
+.objectif-item:hover .objectif-card {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.front {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+    padding: 15px;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.actions {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.actions h4 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.actions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.action-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.icon {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.action-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .objectif-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .actions-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

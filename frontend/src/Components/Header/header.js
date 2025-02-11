@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import "./header.css";
+import logo from "../../assets/logoMIA.png"; // Assurez-vous de remplacer avec le chemin correct de votre logo
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
       <div className="header-container">
         {/* Logo */}
         <a href="/" className="logo">
-          MonLogo
+          <img src={logo} alt="Logo" className="logo-image" />
         </a>
 
         {/* Menu Burger */}
