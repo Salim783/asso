@@ -37,7 +37,7 @@ const Header = () => {
           <a href="#services" className="nav-link" onClick={toggleMenu}>
             Services
           </a>
-          <a href="#contact" className="nav-link" onClick={toggleMenu}>
+          <a href="/contact" className="nav-link" onClick={toggleMenu}>
             Contact
           </a>
 

@@ -1,0 +1,114 @@
+.contact-container {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header h1 {
+    color: #333;
+  }
+  
+  .header p {
+    color: #555;
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .contact-card {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px; /* Bordure plus arrondie pour un look plus doux */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+    margin-right: 20px; /* Espacement à droite de la carte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .contact-card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px; /* Espacement plus grand entre les items */
+  }
+  
+  .contact-item h3 {
+    margin: 0 10px;
+    color: #333;
+    font-weight: 600; /* Texte en gras pour plus de clarté */
+  }
+  
+  .contact-item svg {
+    color: #888;
+  }
+  
+  .map-section {
+    width: 45%;
+    text-align: center;
+  }
+  
+  .map-section h2 {
+    color: #333;
+  }
+  
+  .donation-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .donation-section h2 {
+    color: #333;
+  }
+  
+  .donation-section p {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .donation-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  .donation-link:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-card, .map-section {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  
