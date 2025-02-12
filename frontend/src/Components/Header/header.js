@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
 import "./header.css";
 import logo from "../../assets/logoMIA.png"; // Assurez-vous de remplacer avec le chemin correct de votre logo
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,9 +48,9 @@ const Header = () => {
               Les Assos <FiChevronDown className="dropdown-icon" />
             </button>
             <div className="dropdown-menu">
-              <a href="#asso-france" className="dropdown-item">
+              <Link to='/AssoOne' className="dropdown-item">
                 Asso France
-              </a>
+              </Link>
               <a href="#asso-maroc" className="dropdown-item">
                 Asso Maroc
               </a>

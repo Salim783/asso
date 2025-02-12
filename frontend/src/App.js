@@ -4,6 +4,7 @@ import Accueil from './Components/Accueil/accueil.js'; // Importation du composa
 import Contact from './Components/contact/contact.js'; // Importation du composant Page
 import Header from './Components/Header/header.js'
 import Footer from './Components/Footer/footer.js'
+import AssoOne from './Components/AssoOne/AssoOne.js'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         {/* Utilisez <Accueil /> pour le rendre */}
         <Route path="/" element={<Accueil />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/AssoOne" element={<AssoOne />} />
       </Routes>
       <Footer />
     </Router>
