@@ -15,9 +15,9 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         {/* Logo */}
-        <a href="/" className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="Logo" className="logo-image" />
-        </a>
+        </Link>
 
         {/* Menu Burger */}
         <button className="burger-menu" onClick={toggleMenu}>
@@ -32,15 +32,15 @@ const Header = () => {
           </button>
 
           {/* Liens */}
-          <a href="#about" className="nav-link" onClick={toggleMenu}>
+          <Link to="#about" className="nav-link" onClick={toggleMenu}>
             À propos
-          </a>
-          <a href="#services" className="nav-link" onClick={toggleMenu}>
+          </Link>
+          <Link to="#services" className="nav-link" onClick={toggleMenu}>
             Services
-          </a>
-          <a href="/contact" className="nav-link" onClick={toggleMenu}>
+          </Link>
+          <Link to="/contact" className="nav-link" onClick={toggleMenu}>
             Contact
-          </a>
+          </Link>
 
           {/* Dropdown */}
           <div className="dropdown">
@@ -51,9 +51,9 @@ const Header = () => {
               <Link to='/AssoOne' className="dropdown-item">
                 Asso France
               </Link>
-              <a href="#asso-maroc" className="dropdown-item">
+              <Link to="#asso-maroc" className="dropdown-item">
                 Asso Maroc
-              </a>
+              </Link>
             </div>
           </div>
         </nav>
