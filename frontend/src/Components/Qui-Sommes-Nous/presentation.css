@@ -1,0 +1,170 @@
+/* Conteneur principal de la page */
+.pre-qui-sommes-nous-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 1000px;
+    border-radius: 8px;
+  }
+  
+  /* Section d'introduction */
+  .pre-intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .pre-intro h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pre-intro p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Section Mission */
+  .pre-mission {
+    margin-bottom: 40px;
+  }
+  
+  .pre-mission h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pre-mission p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Section Valeurs */
+  .pre-valeurs {
+    margin-bottom: 40px;
+  }
+  
+  .pre-valeurs h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pre-valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .pre-valeur-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pre-valeur-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .pre-valeur-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Section Actions */
+  .pre-actions {
+    margin-bottom: 40px;
+  }
+  
+  .pre-actions h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pre-actions p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .pre-actions ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .pre-actions li {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Section Nos Partenaires */
+  .pre-nos-partenaires {
+    margin-bottom: 40px;
+  }
+  
+  .pre-nos-partenaires h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pre-nos-partenaires p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .pre-partenaires-logos {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .pre-partenaires-logos img {
+    height: 60px;
+    width: auto;
+    margin: 0 15px;
+  }
+  
+  /* Section Nous Contacter */
+  .pre-nous-contacter {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .pre-nous-contacter h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pre-nous-contacter p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .pre-contact-button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pre-contact-button:hover {
+    background-color: #4cae4c;
+  }
+  

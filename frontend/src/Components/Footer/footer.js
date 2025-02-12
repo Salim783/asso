@@ -41,9 +41,9 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="footer-title">Liens rapides</h3>
               <ul className="footer-list">
-                <li><Link to="#services" className="footer-link">Services</Link></li>
-                <li><Link to="#faq" className="footer-link">FAQ</Link></li>
-                <li><Link to="#support" className="footer-link">Support</Link></li>
+                <li><Link to="#services" className="footer-link">Asso Maroc</Link></li>
+                <li><Link to="#faq" className="footer-link">Asso France</Link></li>
+                <li><Link to="#support" className="footer-link">Accueil</Link></li>
               </ul>
             </div>
           </div>
@@ -79,8 +79,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; 2025 MonSite. Tous droits réservés.</p>
         <p>
-          <Link to="/mentions-legales" className="footer-bottom-link">Mentions légales</Link> | {" "}
-          <Link to="/cgu" className="footer-bottom-link">CGU</Link>
+          <Link to="/MentionsLegales" className="footer-bottom-link">Mentions légales</Link> | {" "}
+          <Link to="/CGU" className="footer-bottom-link">CGU</Link>
         </p>
       </div>
     </footer>

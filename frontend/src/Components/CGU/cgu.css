@@ -1,0 +1,34 @@
+.cgu {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  
+  .cgu h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cgu h3 {
+    color: #555;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .cgu p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .cgu strong {
+    font-weight: bold;
+  }
+  

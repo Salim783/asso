@@ -31,19 +31,8 @@ const Header = () => {
             <FiX className="close-icon" /> Fermer
           </button>
 
-          {/* Liens */}
-          <Link to="#about" className="nav-link" onClick={toggleMenu}>
-            À propos
-          </Link>
-          <Link to="#services" className="nav-link" onClick={toggleMenu}>
-            Services
-          </Link>
-          <Link to="/contact" className="nav-link" onClick={toggleMenu}>
-            Contact
-          </Link>
-
-          {/* Dropdown */}
-          <div className="dropdown">
+           {/* Dropdown */}
+           <div className="dropdown">
             <button className="dropdown-btn">
               Les Assos <FiChevronDown className="dropdown-icon" />
             </button>
@@ -56,6 +45,15 @@ const Header = () => {
               </Link>
             </div>
           </div>
+
+          {/* Liens */}
+          <Link to="/Presentation" className="nav-link" onClick={toggleMenu}>
+            Qui sommes-nous
+          </Link>
+          <Link to="/contact" className="nav-link" onClick={toggleMenu}>
+            Contact
+          </Link>
+
         </nav>
       </div>
     </header>
