@@ -5,7 +5,7 @@ import './contact.css';
 const Contact = () => {
   return (
     <div className="contact-container">
-      <div className="header">
+      <div className="tetepage">
         <h1>Contactez-nous</h1>
         <p>Nous sommes là pour vous aider !</p>
       </div>

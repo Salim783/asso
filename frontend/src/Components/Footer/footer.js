@@ -2,6 +2,7 @@ import React from "react";
 import "./footer.css";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"; // Import des icônes React Icons
 import logo from "../../assets/logoMIA.png";
+import {Link} from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -40,9 +41,9 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="footer-title">Liens rapides</h3>
               <ul className="footer-list">
-                <li><a href="#services" className="footer-link">Services</a></li>
-                <li><a href="#faq" className="footer-link">FAQ</a></li>
-                <li><a href="#support" className="footer-link">Support</a></li>
+                <li><Link to="#services" className="footer-link">Services</Link></li>
+                <li><Link to="#faq" className="footer-link">FAQ</Link></li>
+                <li><Link to="#support" className="footer-link">Support</Link></li>
               </ul>
             </div>
           </div>
@@ -50,30 +51,27 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="footer-socials">
-          <a
-            href="https://facebook.com"
+          <Link to="https://facebook.com"
             className="social-icon"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaFacebook className="icon" />
-          </a>
-          <a
-            href="https://twitter.com"
+          </Link>
+          <Link to="https://twitter.com"
             className="social-icon"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaTwitter className="icon" />
-          </a>
-          <a
-            href="https://instagram.com"
+          </Link>
+          <Link to="https://instagram.com"
             className="social-icon"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaInstagram className="icon" />
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -81,8 +79,8 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy; 2025 MonSite. Tous droits réservés.</p>
         <p>
-          <a href="/mentions-legales" className="footer-bottom-link">Mentions légales</a> | {" "}
-          <a href="/cgu" className="footer-bottom-link">CGU</a>
+          <Link to="/mentions-legales" className="footer-bottom-link">Mentions légales</Link> | {" "}
+          <Link to="/cgu" className="footer-bottom-link">CGU</Link>
         </p>
       </div>
     </footer>
