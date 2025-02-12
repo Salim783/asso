@@ -1,4 +1,3 @@
-import Header from "../Header/header";
 import {GiHotMeal} from 'react-icons/gi';
 
 function AssoOne () {

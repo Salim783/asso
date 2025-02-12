@@ -5,6 +5,7 @@ import Contact from './Components/contact/contact.js'; // Importation du composa
 import Header from './Components/Header/header.js'
 import Footer from './Components/Footer/footer.js'
 import AssoOne from './Components/AssoOne/AssoOne.js'
+import Assoma from './Components/Assoma/assoma.js'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Accueil />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/AssoOne" element={<AssoOne />} />
+        <Route path="/Assoma" element={<Assoma />} />
       </Routes>
       <Footer />
     </Router>
