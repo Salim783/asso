@@ -24,7 +24,6 @@
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 15px;
-    font-family: 'Lora', serif;
 }
 
 .presentation p {
@@ -53,7 +52,6 @@
     background-color: #f4f6f9;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .histoire h2 {
@@ -61,7 +59,6 @@
     margin-bottom: 20px;
     color: #333;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 
 .histoire p {
@@ -69,22 +66,6 @@
     line-height: 1.7;
     color: #444;
     text-align: justify;
-    margin-bottom: 40px;
-}
-
-.histoire blockquote {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #777;
-    border-left: 4px solid #333;
-    padding-left: 20px;
-    margin: 20px 0;
-}
-
-.histoire hr {
-    border: 0;
-    border-top: 1px solid #e0e0e0;
-    margin: 30px 0;
 }
 
 .objectif {
@@ -116,21 +97,14 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.6s, box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
 }
 
 .objectif-item.flip .objectif-card {
     transform: rotateY(180deg);
 }
 
-.objectif-item:hover .objectif-card {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-.action-item:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
 .front, .back {
     position: absolute;
     width: 100%;
@@ -163,12 +137,6 @@
     margin-bottom: 15px;
 }
 
-h4 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-top: 10px;
-}
-
 .actions {
     margin-top: 50px;
     text-align: center;
@@ -197,15 +165,9 @@ h4 {
     text-align: center;
 }
 
-.icon {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.action-item p {
-    font-size: 1rem;
-    color: #555;
+.action-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
