@@ -116,19 +116,19 @@ const theme = createTheme({
             outline: '3px solid rgba(20,92,82,0.28)',
             outlineOffset: 2,
           },
-        },
-        containedPrimary: {
-          color: '#f8f3ea',
-          backgroundColor: '#145c52',
-          '&:hover': {
-            backgroundColor: '#0f4a42',
+          '&.MuiButton-containedPrimary': {
+            color: '#f8f3ea',
+            backgroundColor: '#145c52',
+            '&:hover': {
+              backgroundColor: '#0f4a42',
+            },
           },
-        },
-        containedSecondary: {
-          color: '#f8f3ea',
-          backgroundColor: '#7f4c27',
-          '&:hover': {
-            backgroundColor: '#6b3d1d',
+          '&.MuiButton-containedSecondary': {
+            color: '#f8f3ea',
+            backgroundColor: '#7f4c27',
+            '&:hover': {
+              backgroundColor: '#6b3d1d',
+            },
           },
         },
       },

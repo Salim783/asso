@@ -15,7 +15,7 @@ export const contactPageStyles: Record<(typeof contactPageClasses)[keyof typeof 
     background: 'linear-gradient(180deg, rgba(255,253,248,1) 0%, rgba(217,236,232,0.48) 100%)',
   },
   [contactPageClasses.mapCard]: {
-    p: 2,
+    p: 0,
     borderRadius: 4,
     border: '1px solid',
     borderColor: 'divider',
@@ -41,9 +41,10 @@ export const contactPageBodyStyles: SxProps<Theme> = {
 };
 
 export const contactPageIframeStyles: SxProps<Theme> = {
+  display: 'block',
   width: '100%',
   minHeight: { xs: 340, md: '100%' },
   height: { xs: 340, md: '100%' },
   border: 0,
-  borderRadius: 2,
+  backgroundColor: 'transparent',
 };

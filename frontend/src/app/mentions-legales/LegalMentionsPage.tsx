@@ -1,4 +1,5 @@
-import { AppCard, AppSection } from '@/Components/design-system';
+import AppCard from '@/Components/design-system/AppCard';
+import AppSection from '@/Components/design-system/AppSection';
 import { EyebrowSectionContent } from '@/types/content';
 import {
   legalMentionsPageBodyStyles,

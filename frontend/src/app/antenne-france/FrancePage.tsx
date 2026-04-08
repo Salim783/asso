@@ -1,7 +1,10 @@
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import { GiClothes, GiHotMeal, GiMusicalNotes } from 'react-icons/gi';
-import { AppCard, AppSection, FeatureCard, HeroBanner } from '@/Components/design-system';
+import AppCard from '@/Components/design-system/AppCard';
+import AppSection from '@/Components/design-system/AppSection';
+import FeatureCard from '@/Components/design-system/FeatureCard';
+import HeroBanner from '@/Components/design-system/HeroBanner';
 import { CardItem, HeroContent, SectionContent } from '@/types/content';
 import {
   francePageClasses,

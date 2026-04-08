@@ -46,6 +46,7 @@ export const heroBannerPanelStyles: SxProps<Theme> = {
 export const heroBannerGridStyles: SxProps<Theme> = {
   position: 'relative',
   zIndex: 1,
+  alignItems: 'stretch',
 };
 
 export const heroBannerTitleStyles: SxProps<Theme> = {
@@ -67,22 +68,46 @@ export const heroBannerChipStyles: SxProps<Theme> = {
   border: '1px solid rgba(255,255,255,0.16)',
 };
 
-export const heroBannerPrimaryActionStyles: SxProps<Theme> = {
+export const heroBannerPrimaryActionStyles = {
   backgroundColor: 'background.paper',
-  color: 'primary.dark',
+  color: 'text.primary',
+  '&:visited': {
+    color: 'text.primary',
+  },
   '&:hover': {
     backgroundColor: 'background.paper',
+    color: 'text.primary',
   },
-};
+} satisfies SxProps<Theme>;
 
-export const heroBannerSecondaryActionStyles: SxProps<Theme> = {
-  color: 'primary.contrastText',
+export const heroBannerSecondaryActionStyles = {
+  color: 'text.primary',
   borderColor: 'rgba(255,255,255,0.35)',
+  '&:visited': {
+    color: 'text.primary',
+  },
   '&:hover': {
+    color: 'text.primary',
     borderColor: 'rgba(255,255,255,0.55)',
     backgroundColor: 'rgba(255,255,255,0.06)',
   },
-};
+} satisfies SxProps<Theme>;
+
+export const heroBannerSelectedActionStyles = {
+  '&.Mui-selected, &[aria-current="page"], &[data-selected="true"]': {
+    color: 'text.primary',
+    backgroundColor: 'background.paper',
+    borderColor: 'background.paper',
+  },
+  '&.Mui-selected:hover, &[aria-current="page"]:hover, &[data-selected="true"]:hover': {
+    color: 'text.primary',
+    backgroundColor: 'background.paper',
+    borderColor: 'background.paper',
+  },
+  '&.Mui-selected:visited, &[aria-current="page"]:visited, &[data-selected="true"]:visited': {
+    color: 'text.primary',
+  },
+} satisfies SxProps<Theme>;
 
 export const heroBannerAsideStyles: SxProps<Theme> = {
   p: 3,

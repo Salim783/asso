@@ -16,7 +16,10 @@ export default function Loading() {
         py: { xs: 10, md: 14 },
       }}
     >
-      <Stack spacing={2} alignItems="center" justifyContent="center" textAlign="center">
+      <Stack
+        spacing={2}
+        sx={{ alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}
+      >
         <Box
           sx={{
             width: 68,

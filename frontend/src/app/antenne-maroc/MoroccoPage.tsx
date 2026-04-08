@@ -6,7 +6,9 @@ import img1 from '@/assets/donsFonds.jpg';
 import img2 from '@/assets/donVet.jpg';
 import img3 from '@/assets/donsAlim.jpg';
 import img4 from '@/assets/donEcole.jpeg';
-import { AppCard, AppSection, HeroBanner } from '@/Components/design-system';
+import AppCard from '@/Components/design-system/AppCard';
+import AppSection from '@/Components/design-system/AppSection';
+import HeroBanner from '@/Components/design-system/HeroBanner';
 import { CardItem, HeroContent, SectionContent } from '@/types/content';
 import {
   moroccoPageBodyStyles,

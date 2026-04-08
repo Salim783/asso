@@ -119,8 +119,14 @@ export default function Header({ locale, locales, common, header, languageSwitch
       >
         <Paper elevation={0} className={headerClasses.surface} sx={getHeaderSurfaceStyles(theme)}>
           <Stack spacing={2}>
-            <Stack direction="row" alignItems="center" justifyContent="space-between" spacing={2}>
-              <Stack component={Link} href="/" direction="row" spacing={1.5} alignItems="center" sx={headerLogoLinkStyles}>
+            <Stack direction="row" spacing={2} sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
+              <Stack
+                component={Link}
+                href="/"
+                direction="row"
+                spacing={1.5}
+                sx={headerLogoLinkStyles}
+              >
                 <Box className={headerClasses.logoBadge} sx={headerLogoBadgeStyles}>
                   <Image src={logo} alt="Logo MIA" width={40} height={40} priority />
                 </Box>
@@ -134,8 +140,13 @@ export default function Header({ locale, locales, common, header, languageSwitch
                 </Stack>
               </Stack>
 
-              <Stack direction="row" spacing={2.5} alignItems="center" sx={{ display: { xs: 'none', md: 'flex' } }}>
-                <Stack direction="row" spacing={0.5} alignItems="center" className={headerClasses.navGroup} sx={headerNavGroupStyles}>
+              <Stack direction="row" spacing={2.5} sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+                <Stack
+                  direction="row"
+                  spacing={0.5}
+                  className={headerClasses.navGroup}
+                  sx={headerNavGroupStyles}
+                >
                   {navigation.map((item) => (
                     <NavLink key={item.href} pathname={pathname} {...item} />
                   ))}
@@ -167,7 +178,7 @@ export default function Header({ locale, locales, common, header, languageSwitch
 
             <Box sx={{ display: { xs: 'block', md: 'none' } }}>
               <Collapse in={mobileMenu.isOpen}>
-                <Stack spacing={2} pt={1}>
+                <Stack spacing={2} sx={{ pt: 1 }}>
                   <Divider />
                   <Stack spacing={1}>
                     {navigation.map((item) => (

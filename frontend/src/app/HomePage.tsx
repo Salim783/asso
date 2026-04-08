@@ -10,7 +10,10 @@ import {
   FaRegHandshake,
   FaUniversity,
 } from 'react-icons/fa';
-import { AppCard, AppSection, FeatureCard, HeroBanner } from '@/Components/design-system';
+import AppCard from '@/Components/design-system/AppCard';
+import AppSection from '@/Components/design-system/AppSection';
+import FeatureCard from '@/Components/design-system/FeatureCard';
+import HeroBanner from '@/Components/design-system/HeroBanner';
 import { HOME_SECTION_IDS } from '@/config/routes';
 import { CardCollection, HeroContent, IntroContent, SectionContent } from '@/types/content';
 import {
@@ -62,7 +65,7 @@ export default function HomePage({ hero, intro, priorities, actions, closing }: 
         title={intro.title}
         description={intro.description}
       >
-        <Grid container spacing={3.5} alignItems="stretch">
+        <Grid container spacing={3.5} sx={{ alignItems: 'stretch' }}>
           <Grid size={{ xs: 12, md: 7 }}>
             <AppCard className={homePageClasses.storyCard} sx={homePageStyles[homePageClasses.storyCard]} contentSx={{ p: 0 }}>
               <Stack spacing={3}>
@@ -81,7 +84,7 @@ export default function HomePage({ hero, intro, priorities, actions, closing }: 
             </AppCard>
           </Grid>
           <Grid size={{ xs: 12, md: 5 }}>
-            <Stack spacing={2.5} height="100%">
+            <Stack spacing={2.5} sx={{ height: '100%' }}>
               {intro.points.map((point, index) => (
                 <AppCard
                   key={point}

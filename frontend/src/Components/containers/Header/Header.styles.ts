@@ -66,11 +66,13 @@ export const headerLogoTitleStyles: SxProps<Theme> = {
 export const headerLogoLinkStyles: SxProps<Theme> = {
   textDecoration: 'none',
   color: 'inherit',
+  alignItems: 'center',
 };
 
 export const headerNavGroupStyles: SxProps<Theme> = {
   px: 1,
   py: 0.5,
+  alignItems: 'center',
   borderRadius: 2,
   backgroundColor: 'rgba(255,255,255,0.6)',
   border: '1px solid',

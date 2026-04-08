@@ -3,7 +3,9 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import { ReactNode } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
-import { AppCard, AppSection, FeatureCard } from '@/Components/design-system';
+import AppCard from '@/Components/design-system/AppCard';
+import AppSection from '@/Components/design-system/AppSection';
+import FeatureCard from '@/Components/design-system/FeatureCard';
 import { CardItem, EyebrowSectionContent } from '@/types/content';
 import {
   contactPageBodyStyles,
@@ -34,9 +36,9 @@ export default function ContactPage({
 }: ContactPageProps) {
   return (
     <AppSection eyebrow={section.eyebrow} title={section.title} description={section.description}>
-      <Grid container spacing={3.5} alignItems="stretch">
+      <Grid container spacing={3.5} sx={{ alignItems: 'stretch' }}>
         <Grid size={{ xs: 12, md: 5 }}>
-          <Stack spacing={3} height="100%">
+          <Stack spacing={3} sx={{ height: '100%' }}>
             <AppCard
               className={contactPageClasses.introCard}
               sx={contactPageStyles[contactPageClasses.introCard]}
@@ -64,11 +66,17 @@ export default function ContactPage({
           </Stack>
         </Grid>
         <Grid size={{ xs: 12, md: 7 }}>
-          <AppCard className={contactPageClasses.mapCard} sx={contactPageStyles[contactPageClasses.mapCard]} contentSx={{ p: 0 }}>
+          <AppCard
+            className={contactPageClasses.mapCard}
+            sx={contactPageStyles[contactPageClasses.mapCard]}
+            contentSx={{ p: 0, height: '100%' }}
+          >
             <Box
               component="iframe"
               title={mapTitle}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.224305658459!2d2.2978!3d48.8584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b57f755623%3A0x1c665cc088ea6c5e!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1582712651990!5m2!1sfr!2sfr"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
               sx={contactPageIframeStyles}
             />
           </AppCard>

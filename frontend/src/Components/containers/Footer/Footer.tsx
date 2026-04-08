@@ -5,7 +5,6 @@ import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import NextLink from 'next/link';
 import { ReactElement } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import type { Messages } from '@/translations/catalogs';
@@ -13,15 +12,14 @@ import {
   footerClasses,
   footerDescriptionStyles,
   footerDividerStyles,
-  footerLinkStyles,
   footerMetaStyles,
   footerRootStyles,
   footerSocialLinkStyles,
   footerSurfaceStyles,
   footerTitleStyles,
 } from './Footer.styles';
+import FooterNavLink from './FooterNavLink';
 
-type FooterSection = Messages['footer']['sections'][number];
 type FooterSocial = Messages['footer']['socials'][number];
 
 type FooterProps = {
@@ -48,14 +46,13 @@ export default function Footer({ common, footer }: FooterProps) {
         }}
       >
         <Paper elevation={0} className={footerClasses.surface} sx={footerSurfaceStyles}>
-          <Stack spacing={4} position="relative" zIndex={1}>
+          <Stack spacing={4} sx={{ position: 'relative', zIndex: 1 }}>
             <Stack
               direction={{ xs: 'column', md: 'row' }}
               spacing={4}
-              justifyContent="space-between"
-              alignItems={{ xs: 'flex-start', md: 'flex-end' }}
+              sx={{ justifyContent: 'space-between', alignItems: { xs: 'flex-start', md: 'flex-end' } }}
             >
-              <Stack spacing={1.5} maxWidth={420}>
+              <Stack spacing={1.5} sx={{ maxWidth: 420 }}>
                 <Typography variant="h2" sx={footerTitleStyles}>
                   {common.associationName}
                 </Typography>
@@ -63,7 +60,7 @@ export default function Footer({ common, footer }: FooterProps) {
                   {footer.description}
                 </Typography>
               </Stack>
-              <Stack direction="row" spacing={1.25} flexWrap="wrap">
+              <Stack direction="row" spacing={1.25} sx={{ flexWrap: 'wrap' }}>
                 {footer.socials.map((social) => (
                   <Link
                     key={social.label}
@@ -82,22 +79,16 @@ export default function Footer({ common, footer }: FooterProps) {
 
             <Divider sx={footerDividerStyles} />
 
-            <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} justifyContent="space-between">
+            <Stack direction={{ xs: 'column', md: 'row' }} spacing={4} sx={{ justifyContent: 'space-between' }}>
               {footer.sections.map((section) => (
-                <Stack key={section.title} spacing={1.25} minWidth={180}>
-                  <Typography variant="subtitle1" fontWeight={700} sx={{ color: 'inherit' }}>
+                <Stack key={section.title} spacing={1.25} sx={{ minWidth: 180 }}>
+                  <Typography variant="subtitle1" sx={{ color: 'inherit', fontWeight: 700 }}>
                     {section.title}
                   </Typography>
                   {section.items.map((item) => (
-                    <Link
-                      key={item.href}
-                      component={NextLink}
-                      href={item.href}
-                      underline="hover"
-                      sx={footerLinkStyles}
-                    >
+                    <FooterNavLink key={item.href} href={item.href}>
                       {item.label}
-                    </Link>
+                    </FooterNavLink>
                   ))}
                 </Stack>
               ))}
@@ -108,8 +99,7 @@ export default function Footer({ common, footer }: FooterProps) {
             <Stack
               direction={{ xs: 'column', md: 'row' }}
               spacing={1}
-              justifyContent="space-between"
-              alignItems={{ xs: 'flex-start', md: 'center' }}
+              sx={{ justifyContent: 'space-between', alignItems: { xs: 'flex-start', md: 'center' } }}
             >
               <Typography variant="body2" sx={footerMetaStyles}>
                 {footer.copyright}

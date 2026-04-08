@@ -1,6 +1,6 @@
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import { ReactNode } from 'react';
-import { AppShell } from '@/Components/containers';
+import AppShell from '@/Components/containers/AppShell';
 import { getCurrentLocaleData } from '@/translations/server';
 import ThemeRegistry from './ThemeRegistry';
 import './globals.css';

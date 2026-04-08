@@ -1,7 +1,10 @@
+'use client';
+
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { usePathname } from 'next/navigation';
 import AppButton from '../AppButton';
 import AppCard from '../AppCard';
 import AppContainer from '../AppContainer';
@@ -16,6 +19,7 @@ import {
   heroBannerPanelStyles,
   heroBannerPrimaryActionStyles,
   heroBannerRootStyles,
+  heroBannerSelectedActionStyles,
   heroBannerSecondaryActionStyles,
   heroBannerStatsCardStyles,
   heroBannerStatsLabelStyles,
@@ -49,19 +53,35 @@ function HeroBannerActions({
   primaryAction,
   secondaryAction,
 }: Pick<HeroBannerProps, 'primaryAction' | 'secondaryAction'>) {
+  const pathname = usePathname();
+
   if (!primaryAction && !secondaryAction) {
     return null;
   }
 
+  const isActionSelected = (href: string) => href.split('#')[0] === pathname;
+
   return (
     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
       {primaryAction ? (
-        <AppButton href={primaryAction.href} variant="contained" size="large" sx={heroBannerPrimaryActionStyles}>
+        <AppButton
+          href={primaryAction.href}
+          variant="contained"
+          size="large"
+          aria-current={isActionSelected(primaryAction.href) ? 'page' : undefined}
+          sx={[heroBannerPrimaryActionStyles, heroBannerSelectedActionStyles]}
+        >
           {primaryAction.label}
         </AppButton>
       ) : null}
       {secondaryAction ? (
-        <AppButton href={secondaryAction.href} variant="outlined" size="large" sx={heroBannerSecondaryActionStyles}>
+        <AppButton
+          href={secondaryAction.href}
+          variant="outlined"
+          size="large"
+          aria-current={isActionSelected(secondaryAction.href) ? 'page' : undefined}
+          sx={[heroBannerSecondaryActionStyles, heroBannerSelectedActionStyles]}
+        >
           {secondaryAction.label}
         </AppButton>
       ) : null}
@@ -130,7 +150,7 @@ export default function HeroBanner({
   return (
     <AppContainer className={heroBannerClasses.root} sx={heroBannerRootStyles}>
       <AppCard className={heroBannerClasses.panel} sx={heroBannerPanelStyles} contentSx={{ p: 0 }}>
-        <Grid container spacing={{ xs: 4, md: 5 }} alignItems="stretch" sx={heroBannerGridStyles}>
+        <Grid container spacing={{ xs: 4, md: 5 }} sx={heroBannerGridStyles}>
           <Grid size={{ xs: 12, md: 7 }}>
             <Stack spacing={3.5}>
               {eyebrow ? (
@@ -143,7 +163,7 @@ export default function HeroBanner({
               </Typography>
               <Typography sx={heroBannerDescriptionStyles}>{description}</Typography>
               {highlights.length ? (
-                <Stack direction="row" spacing={1.25} useFlexGap flexWrap="wrap">
+                <Stack direction="row" spacing={1.25} useFlexGap sx={{ flexWrap: 'wrap' }}>
                   {highlights.map((item) => (
                     <Chip key={item} label={item} sx={heroBannerChipStyles} />
                   ))}
@@ -153,7 +173,7 @@ export default function HeroBanner({
             </Stack>
           </Grid>
           <Grid size={{ xs: 12, md: 5 }}>
-            <Stack spacing={2.25} height="100%">
+            <Stack spacing={2.25} sx={{ height: '100%' }}>
               <HeroBannerAside asideTitle={asideTitle} asideDescription={asideDescription} />
               <HeroBannerStats stats={stats} />
             </Stack>
