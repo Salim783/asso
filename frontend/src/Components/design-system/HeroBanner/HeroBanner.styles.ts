@@ -69,27 +69,58 @@ export const heroBannerChipStyles: SxProps<Theme> = {
 };
 
 export const heroBannerPrimaryActionStyles = {
-  backgroundColor: 'background.paper',
-  color: 'text.primary',
+  backgroundColor: '#fffdf8',
+  color: '#1b211f !important',
   '&:visited': {
-    color: 'text.primary',
+    color: '#1b211f !important',
   },
   '&:hover': {
-    backgroundColor: 'background.paper',
-    color: 'text.primary',
+    backgroundColor: '#fffdf8',
+    color: '#1b211f !important',
+  },
+  '&:active': {
+    backgroundColor: '#fffdf8',
+    color: '#1b211f !important',
+  },
+  '&.MuiButton-containedPrimary': {
+    backgroundColor: '#fffdf8',
+    color: '#1b211f !important',
+  },
+  '&.MuiButton-containedPrimary:hover': {
+    backgroundColor: '#fffdf8',
+    color: '#1b211f !important',
+  },
+  '&.MuiButton-containedPrimary:active': {
+    backgroundColor: '#fffdf8',
+    color: '#1b211f !important',
+  },
+  '&.Mui-focusVisible': {
+    backgroundColor: '#fffdf8',
+    color: '#1b211f !important',
   },
 } satisfies SxProps<Theme>;
 
 export const heroBannerSecondaryActionStyles = {
-  color: 'text.primary',
+  color: '#1b211f !important',
   borderColor: 'rgba(255,255,255,0.35)',
+  backgroundColor: 'rgba(255,253,248,0.92)',
   '&:visited': {
-    color: 'text.primary',
+    color: '#1b211f !important',
   },
   '&:hover': {
-    color: 'text.primary',
-    borderColor: 'rgba(255,255,255,0.55)',
-    backgroundColor: 'rgba(255,255,255,0.06)',
+    color: '#1b211f !important',
+    borderColor: 'rgba(255,255,255,0.35)',
+    backgroundColor: 'rgba(255,253,248,0.92)',
+  },
+  '&:active': {
+    color: '#1b211f !important',
+    borderColor: 'rgba(255,255,255,0.35)',
+    backgroundColor: 'rgba(255,253,248,0.92)',
+  },
+  '&.Mui-focusVisible': {
+    color: '#1b211f !important',
+    borderColor: 'rgba(255,255,255,0.35)',
+    backgroundColor: 'rgba(255,253,248,0.92)',
   },
 } satisfies SxProps<Theme>;
 

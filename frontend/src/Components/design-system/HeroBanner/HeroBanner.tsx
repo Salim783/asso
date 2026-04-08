@@ -4,7 +4,6 @@ import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { usePathname } from 'next/navigation';
 import AppButton from '../AppButton';
 import AppCard from '../AppCard';
 import AppContainer from '../AppContainer';
@@ -19,7 +18,6 @@ import {
   heroBannerPanelStyles,
   heroBannerPrimaryActionStyles,
   heroBannerRootStyles,
-  heroBannerSelectedActionStyles,
   heroBannerSecondaryActionStyles,
   heroBannerStatsCardStyles,
   heroBannerStatsLabelStyles,
@@ -53,13 +51,9 @@ function HeroBannerActions({
   primaryAction,
   secondaryAction,
 }: Pick<HeroBannerProps, 'primaryAction' | 'secondaryAction'>) {
-  const pathname = usePathname();
-
   if (!primaryAction && !secondaryAction) {
     return null;
   }
-
-  const isActionSelected = (href: string) => href.split('#')[0] === pathname;
 
   return (
     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
@@ -68,8 +62,7 @@ function HeroBannerActions({
           href={primaryAction.href}
           variant="contained"
           size="large"
-          aria-current={isActionSelected(primaryAction.href) ? 'page' : undefined}
-          sx={[heroBannerPrimaryActionStyles, heroBannerSelectedActionStyles]}
+          sx={heroBannerPrimaryActionStyles}
         >
           {primaryAction.label}
         </AppButton>
@@ -79,8 +72,7 @@ function HeroBannerActions({
           href={secondaryAction.href}
           variant="outlined"
           size="large"
-          aria-current={isActionSelected(secondaryAction.href) ? 'page' : undefined}
-          sx={[heroBannerSecondaryActionStyles, heroBannerSelectedActionStyles]}
+          sx={heroBannerSecondaryActionStyles}
         >
           {secondaryAction.label}
         </AppButton>
