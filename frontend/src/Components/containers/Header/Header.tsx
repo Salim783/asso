@@ -74,7 +74,7 @@ export default function Header({ locale, locales, common, header, languageSwitch
 
   useEffect(() => {
     mobileMenu.close();
-  }, [mobileMenu, pathname]);
+  }, [mobileMenu.close, pathname]);
 
   const handleLocaleChange = (_event: MouseEvent<HTMLElement>, nextLocale: string | null) => {
     if (!nextLocale || nextLocale === locale) {
